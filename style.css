@@ -37,28 +37,28 @@
 .button1 {
   background-color: #FF9AA2; background-image: radial-gradient(circle, white,  #FF9AA2); border: 5px dotted #E9E2FE;}
 
-.button1:hover {color: white; background-color:  #FF9AA2; background-image: url('./graphics/intropic.jpeg'); 
+.button1:hover {color: white; background-color:  #FF9AA2; background-image: url('./intropic.jpeg'); 
   text-shadow: 0 0 20px black; background-size: cover; border-radius: 60px;}
 
 .button2 {
   background-color: #FFD0B1; background-image: radial-gradient(circle, white, #FFD0B1); color: black; border: 5px dotted #CCCC99;}
 
 .button2:hover {
-  background-color: #FFD0B1; color: white; background-image: url('./graphics/lasercutter.jpeg');
+  background-color: #FFD0B1; color: white; background-image: url('./lasercutter.jpeg');
   text-shadow: 0 0 20px black; background-size: cover; border-radius: 60px;}
 
 .button3 {
   background-color: #F9EFC7; background-image: radial-gradient(circle, white, #F9EFC7); border: 5px dotted #E7C27D;}
 
 .button3:hover {
-  background-color: #F9EFC7; color: white; background-image: url('./graphics/handtools.jpeg');
+  background-color: #F9EFC7; color: white; background-image: url('./handtools.jpeg');
   text-shadow: 0 0 20px black; background-size: cover; border-radius: 60px;}
 
 .button4 {
   background-color: #C3EDBF; background-image: radial-gradient(circle, white,  #C3EDBF); border: 5px dotted #E9E2FE;}
 
 .button4:hover {
-  color: white; background-image: url('./graphics/microcontroller.png'); 
+  color: white; background-image: url('./microcontroller.png'); 
   text-shadow: 0 0 20px black; background-size: cover; border-radius: 60px;}
 }
 

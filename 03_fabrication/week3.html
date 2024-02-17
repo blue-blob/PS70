@@ -16,7 +16,7 @@
     background-image: linear-gradient(45deg,
           rgba(171, 47, 103, 0.5),
           rgba(9, 30, 70, 0.5)), 
-            url('stars2.jpg');
+            url('../stars2.jpg');
     background-size: contain;
     background-attachment: fixed;
     text-align: center;
@@ -50,11 +50,41 @@
     cursor: url('funcapybara.png'), auto;
   }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
 p {
   margin-top: 25px;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
+}
+
+
+ul { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+  list-style-image: square;
+  text-indent: -0.8em;
+
+} 
+
+ol { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+} 
+
+video {
+  display: block;
+  margin: auto;
 }
 
 </style>
@@ -75,49 +105,177 @@ p {
     </div>
   </div>
 </nav>
+<br>
+ <video width="320" height="560" autoplay muted controls loop>
+  <source src="WorkingModel.MOV" type="video/mp4"></video><br>
 Click on the dropdown arrows to read more about each stage of this Kinetic Sculpture!
-<details style="padding-top: 10px; cursor: url('funcapybara.png'), auto;">
+<details style="padding-top: 10px; cursor: url('planetbullet.png'), auto;">
   <summary>Idea for the Project:</summary> 
-    <summary style="font-weight: 40;">
-
-      <p>I am an Earth and Planetary Sciences concentrator, and we love our cycles, loops, and orbits! I had never heard of the term “kinetic sculpture” before this class, but once I learned that we may want to display a repetitive action, I entertained a few ideas, such as flipping a pancake and jumping jacks. However, the one idea that stood out to me was how I could create my own planetary model that displays the things that are currently circling in Earth’s orbit, such as the moon, the International Space Station, satellites, and space exploration trash. I thought all I needed was a simple spinning circle but… yikes, I was so wrong. 
-      <br><br>
-    </p> 
+  <br>
+    <div class="center-justified">
+      I had never heard of the term “kinetic sculpture” before this class, but once I learned that we may want to display a repetitive action, I entertained a few ideas, such as flipping a pancake and jumping jacks. However, the one idea that stood out to me was how I could create my own planetary model that displays the things that are currently circling in Earth’s orbit, such as the moon, the International Space Station, satellites, and space exploration trash. I am an Earth and Planetary Sciences concentrator, and we love our cycles, loops, and orbits! I thought all I needed was a simple spinning circle but… yikes, I was so wrong.
+  <br><br>
+    </div>
 </details>
 
-<details>
+
+<details style= "cursor: url('planetbullet.png'), auto;">
   <summary>Preliminary Design:</summary>
-  <p>I made a preliminary design of the sun and an orbiting Earth. I didn’t know what my next steps would be though. I recognized that I needed some sort of gear(s), but upon searching the internet about what types of gears I should use, I was quickly overwhelmed by all the different types of gears and their mechanics. So, I went to open lab to get some guidance.
+    <div class="center-justified">
+  <br>
+  I made a preliminary design of the sun and an orbiting Earth. I didn’t know what my next steps would be though. I recognized that I needed some sort of gear(s), but upon searching the internet about what types of gears I should use, I was quickly overwhelmed by all the different types of gears and their mechanics. So, I went to open lab to get some guidance.
   <br><br>
+<div class = "centerimages">
+  <img src="prelimdesign.png" alt="A sketch of the preliminary design"></div>
+  <br> <br>
   Bobby introduced me to this thing called a “planetary gearbox,” and this type of gearbox does exactly what I want it to do: display orbiting items around a central item (and hence the name). The planetary gearbox is made up of several moving pieces:
-  <br>
-  A spur gear in the center, which rotates in place
-  <br>
-  Internal gear, a ring that holds all of the gear of the gearbox and is made by cutting teeth into a cylindrical shape but without the top and bottom
-  <br>
-  Spur gears that lie between the center spur gear and the internal gear (we can have as many as we want, but for purposes of learning and not making things too complex, I decided to go with 3)
-  <br>
-
-  We searched up a few tutorials, and then I was off on my own!
-</p>
+  <ul class="subbulletcenter-justified">
+    <li>A spur gear in the center, which rotates in place</li> 
+    <li>Internal gear, a ring that holds all of the gear of the gearbox and is made by cutting teeth into a cylindrical shape but without the top and bottom</li> 
+    <li>Spur gears that lie between the center spur gear and the internal gear (we can have as many as we want, but for purposes of learning and not making things too complex, I decided to go with 3)</li> 
+  </ul> 
+  <br><br>
+<div class = "centerimages">
+ <img src="gearboxex.gif" alt="A moving gearbox"> </div>
+  <br><br>
+    We searched up a few tutorials, and then I was off on my own!
+      </div>
+    <br> <br> 
 </details>
 
-<details>
-  <summary>Making the Planetary Gearbox</summary>
-  <p>I made a preliminary design of the sun and an orbiting Earth. I didn’t know what my next steps would be though. I recognized that I needed some sort of gear(s), but upon searching the internet about what types of gears I should use, I was quickly overwhelmed by all the different types of gears and their mechanics. So, I went to open lab to get some guidance.
-  <br><br>
-  Bobby introduced me to this thing called a “planetary gearbox,” and this type of gearbox does exactly what I want it to do: display orbiting items around a central item (and hence the name). The planetary gearbox is made up of several moving pieces:
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Making the Planetary Gearbox:</summary>
+  <ol> 
+    <li class="center-justified">First, I picked a YouTube video tutorial on how to make the planetary gearbox. The YouTube video tutorial that I followed is linked below:</li> 
+    <br><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/W-tIlhVpZpw?si=rcbW0op5NG5amsb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br><br>
+    <li class="center-justified">Before jumping into making the gearbox, I decided on some things to make sure that the gears in my gearbox will turn out to be compatible.</li>
+    <ul class="subbulletcenter-justified">
+      <li>We determined that our gear ratio = 1:6 (Gr = 1/6).</li>
+      <li>Ring gear (internal gear) will be fixed.</li>
+      <li>Earth gear (centermost spur gear) will be the driving gear (its rotation will force the other gears to rotate).</li>
+      <li>We will use a carrier to help distribute the rotational force.</li>
+      <li>Module = 2; Pressure Angle = 20 degrees</li>
+    </ul>
+    <br>
+  <li class="center-justified">Next, I did some math to know how to design my individual gears.</li>
+    <ul>
+      <div class="subbulletcenter-justified">
+    <li>The ring gear = 80 teeth (R = 80)
+    <li>To determine Earth’s # of teeth, R/((1/Gr) — 1) → 16 teeth (E = 16)</li>
+    <li>To determine the teeth of the gears that orbit the Earth gear, R-E / Module → 32 teeth (P = 32)</li>
+    <li>Number of orbiting items = 3</li>
+    <li>To make sure that the gears are compatible with each other: (R+E)/(# of orbiting items) → 19; if the number is a whole number, then that means the gearboxes will turn with each other based on their number of teeth </li>
+      </div>
+    </ul>
   <br>
-  A spur gear in the center, which rotates in place
+    <li class="center-justified">I used the handy spur gear add-in to speed up the process of designing my gears.</li>
+    <ul>
+      <div class="subbulletcenter-justified">
+    <li>There is a feature on Autodesk Fusion that allows for the creation of spur gears</li>
+    <li>Input math information for the right number of teeth</li>
+    <li>Additional information includes root fillet radius, gear thickness, and hole diameter.</li>
+      </div>
+      <ul>
+        <div class="sub2xbullet">
+          <li>The gear thickness does not matter for me much in this case because I will be laser cutting, which means the thickness of the gear is based on the thickness of the material I choose to laser cut.</li>
+          <li>The hole diameter is based on what type of bolt I will want to use later on</li>
+        </div>
+      </ul>
+    <li class="subbulletcenter-justified">Creating the Internal Gear</li>
+       <ul>
+        <div class="sub2xbullet">
+          <li>The internal gear is just the outer ring, so the hole diameter does not matter</li>
+          <li>After making the spur gear, I created a cylinder and extude cut in order to get just the shape from the edge of the cylinder to the stop of the teeth, leaving a gaping hole in the center</li>
+        </div>
+      </ul>
+      <li class="subbulletcenter-justified">Creating the Earth Gear</li>
+        <ul>
+        <div class="sub2xbullet">
+          <li>The Earth gear has 16 teeth and includes adding a backlash of 0.5 mm and it has a hole diameter of 5 mm (since I will be using 5 mm nuts and bolts)</li>
+        </div>
+      </ul>
+      <li class="subbulletcenter-justified">Creating the Orbiting Items Gear</li>
+        <ul>
+        <div class="sub2xbullet">
+          <li>The Orbiting Items gear has 32 teeth but the rest is the same as the Earth 
+          </li>
+        </div>
+      </ul>
+    </ul> <br><br>
+<div class = "centerimages">
+ <img src="gears.png" alt="Design of the gears in Autodesk Fusion 360"> </div>
   <br>
-  Internal gear, a ring that holds all of the gear of the gearbox and is made by cutting teeth into a cylindrical shape but without the top and bottom
-  <br>
-  Spur gears that lie between the center spur gear and the internal gear (we can have as many as we want, but for purposes of learning and not making things too complex, I decided to go with 3)
-  <br>
+    <li>Creating the Carrier</li>
+    <ul>
+      <div class="subbulletcenter-justified">
+    <li>I created a circle of 10 mm diameter with the same centers as the circles with 5 mm diameter on the Earth and 3 orbiting items gears.</li>
+    <li>From each orbiting item gear, I linked two lines from the places where my 10 mm circle was the widest directly to the widest part of the 10 mm circle of the Earth Gear</li>
+    <li>My lines were not the cleanest, so I used the secant function to make sure my lines did not cross into the circles. In total, there were 6 lines</li>
+    <li>I then filet the edges where the lines connecting one orbiting item to Earth intersected with lines from another orbiting item.</li>
+      </div></ul><br>
+    <div class = "centerimages">
+ <img src="carrier.png" alt="Design of the carrier in Autodesk Fusion 360"> </div><br>
 
-  We searched up a few tutorials, and then I was off on my own!
-</p>
+    <li>I then laser-cut my prototype onto a mat board. I used 5 mm x 20 bolts and 5 mm lock nuts. My initial impressions are that this is so cool. This is my first-ever GEARBOX creation! Upon inspection, however, the flimsy cardboard makes it so that the gears keep on catching on each others’ teeth. So… we will now print on wood.</li><br> 
+    <div class = "centerimages">
+ <img src="prototype1.jpeg" alt="Initial laser print of the gears and carrier"> </div><br>
+    <li>I laser cut on a 6 mm general medium wood piece. The pieces fit much better together and the gears turn without catching. However, because of the head of the bolts attaching the carrier to the various gears, the inner gears do not fit with the thickness of the ring gear. The inner gears are currently at a taller height than the ring gear, making it hard for the inner gears to gain traction on the ring gear since half of it is not attached to the ring gear. To troubleshoot this problem, we printed another ring gear from a piece of wood of similar properties.</li><br> 
+    <li>I then glued the two ring gears together with wood glue, but no matter how I tried to align the pieces, they were not quite aligned. The wood glue also filled in spaces in the teeth crevices, preventing the orbiting items gears from being able to rotate effectively. The glue was occupying the spot. Therefore, I found a thicker piece of wood, 12 mm to make a 12 mm with just one piece of wood instead of two pieces.</li><br>
+    <video width="320" height="560" autoplay muted controls loop>
+  <source src="woodgears.MOV" type="video/mp4"></video>
+  </ol> 
+</div>
 </details>
 
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Attaching the Motor:</summary>
+  <ul>
+      <div class="subbulletcenter-justified">
+    <li>Brainstorming on how to attach the motor</li>
+    <ul>
+      <div class="sub2xbullet">
+          <li>The motor needs to be part of the kinetic sculpture, but currently I do not have space for it in my design. There is a bolt in the center of the carrier connected to the Earth gear, so I can’t just glue my motor onto the center.</li>
+          <li>After consulting with Bobby, we decided that I should create a spacer that will be attached to the carrier in the center. This spacer has a hole in the middle to let the bolt from the carrier come through. </li>
+          <li>This motor has two turning sides, but with my design, I will just be using one side. I attach a piece to the turning pieces on the motor to give the motor more surface area. This surface area is then attached to the spacer, so that when the motor turns, so does the spacer, and in doing so, the carrier turns.</li>
+        </div></ul>
+    <li>I won’t be using the other rotating side of the motor, but it cannot touch the ground, so I glued an aluminum piece that lifts the motor off the ground by a few mm.</li>
+    <li>Because of the addition of the new spacer, added surface area, motor, and aluminum lifter, the gears inside the ring gear are now at a much taller height than the ring gear, so I have to balance the ring gear by supporting it with beams. Originally, I used mat board material, but the table legs that I created were not stable enough.</li><br>
+    <video width="320" height="560" autoplay muted controls loop>
+  <source src="attachmotor.MOV" type="video/mp4"></video><br>
+    <li>Nathan suggested to let the surface area attached to the motor be the earth gear, so I just had to flip my gears so that the carrier is facing upwards. Before, the carrier was facing downward.</li>
+    <li>Nathan also suggested to make my “table” by scoring a long rectangle, which will allow for it to bend along the circumference of my circular contraption.</li><br>
+    <video width="320" height="560" autoplay muted controls loop>
+  <source src="motorbox.MOV" type="video/mp4"></video><br>
+  </div></ul></details>
+
+  <details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Painting Gears:</summary>
+    I then painted the structures as I waited to re-cut some of my parts to provide my gears more support and help my gearbox move more smoothly.<br><br>
+<div class = "centerimages">
+ <img src="paint1.jpeg" alt="painted gears in universe themed colors"> </div>
+
+  <br>I re cut my carrier by having it be wider, and the having more filet for the corner.
+
+<div class="row">
+    <div class="column">
+    <img src="bettersupport.jpeg" alt="Wider carrier" style="width:100%">
+  </div>
+    <div class="column">
+    <img src="paint2.jpeg" alt="All of the different versions of the carrier" style="width:100%">
+  </div>
+</div>
+<br>
+</details>
+
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Connecting the Orbiting Items to the Gearbox:</summary>
+  <ol> 
+    <li class="center-justified">I found 2 balls in the classroom to use as my Earth and Moon.</li> 
+    <li class="center-justified">To get my rocket and satellite, I searched up their PNGs on the internet → opened Inkscape → Path → Trace BitMap → Apply → Delete the original image → Save As → DXF 14 → Go onto Autodesk Fusion → Insert → From DXF → Select appropriate file
+I laser cut my images, cutting the edges, and scoring the rest.</li> 
+    <li class="center-justified">I used these bendable gold poles to nest my orbiting items on them and hot gluing the base onto the top of the spinning gears.</li></ol></details>
+  
 </body>
 </html>

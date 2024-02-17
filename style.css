@@ -9,6 +9,40 @@
   cursor: url('funcapybara.png'), auto; /* made a capybara my cursor, but only when the mouse hovers on the buttons */
 }
 
+.center-justified {
+    text-align: justify;
+    text-align-last: left;
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.centerimages img {
+    display: block;
+    margin: 0 auto;
+}
+
+.centervideos video {
+    display: block;
+    margin: 0 auto;
+}
+
+.subbulletcenter-justified {
+    text-align: justify;
+    text-align-last: left;
+    max-width: 700px;
+    margin: 0 auto; 
+    list-style-image: url('planetbullet.png');
+    text-indent: -1.5em;
+
+}
+
+.sub2xbullet {
+    text-align: justify;
+    text-align-last: left;
+    max-width: 700px;
+    margin: 0 auto; 
+    list-style-image: url('moonbullet.png')
+}
 
 .footer{ 
   position: fixed;     

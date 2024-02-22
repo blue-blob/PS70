@@ -36,6 +36,18 @@
 
 }
 
+p { color: red; }
+code { background-color: #eee; }
+
+pre code {
+  background-color: #eee;
+  color: black;
+  border: 1px solid #999;
+  border-radius: 30px;
+  display: block;
+  padding: 20px;
+}
+
 .sub2xbullet {
     text-align: justify;
     text-align-last: left;

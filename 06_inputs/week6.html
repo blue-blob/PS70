@@ -1,91 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <title>Phannypacc's Documentation</title>
+    <style>
+      body {
+        color: #F2C6A1;
+      }
+    </style>
+</head>
+<head>
+<body>
+<style>
+  body {
+    background-image: linear-gradient(45deg,
+          rgba(171, 47, 103, 0.5),
+          rgba(9, 30, 70, 0.5)), 
+            url('../stars2.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: url('funcapybara.png'), auto;
+  }
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+  h1 {
+    text-align: center;
+    color:  #7A863A;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 900; /* thickness of the letters */
+    font-size: 60px; /* size of the letters */
+    cursor: url('funcapybara.png'), auto;
+    margin: 10px 10px;
+      text-shadow: 0 1px 0 #CCCC99, 0 2px 0 #CCCC99,
+                0 3px 0 #CCCC99, 0 4px 0 #CCCC99,
+                0 5px 0 #CCCC99, 0 6px 0 #CCCC99,
+                0 7px 0 #CCCC99, 0 8px 0 #CCCC99;
+
+  }
+
+  h2 {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 200; /* thickness of the letters */
+    font-size: 30px; /* size of the letters */
+    margin: 10px 10px;
+    cursor: url('funcapybara.png'), auto;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
 
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #130F1D; color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 // Intro to Digital Fabrication // F23</h2>
+ul { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+  list-style-image: square;
+  text-indent: -0.8em;
+
+} 
+
+ol { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+} 
+
+video {
+  display: block;
+  margin: auto;
+}
+
+</style>
+  <div class="starsbackground">
     </div>
+
+<h1> Week 6: Sensor Input Devices </h1>
+<h2> Walnut Oil Has More Capacitance Than Walnut!! </h2>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: transparent; color: #EEE7E8;">
+  <div style="align-items: center; justify-content: center; " class="container-fluid">
     <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
+      <h4><a class="nav-link" href="../index.html">HOME</a></h4>
+      <h4><a class="nav-link" href="../about.html">ABOUT</a></h4>
+      <h4><a class="nav-link" href="../final.html">FINAL PROJECT</a></h4>
+      
     </div>
   </div>
 </nav>
+<br>
+<div class = "centerimages">
+  <img src="smashednuts.jpeg" alt="Two different plates of walnuts"></div>
+<div class = "centerimages">
+  <img src="smaller_conductor_plate.jpeg" alt="Smaller conductor plate"></div>
+ <video width="560" height="320" autoplay muted controls loop>
+  <source src="conductivewalnutoil.MOV" type="video/mp4"></video><br>
+ <video width="560" height="320" autoplay muted controls loop>
+  <source src="thermistorpin.MOV" type="video/mp4"></video><br>
 
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
-
-<h3>Week 6: Electronic Inputs</h3>
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <a id="btn" href="wk6.zip" download>Download my files from this week!
-  </a>
-</div>
-<p class="margin">   </p>
-
-<h4>Assignment: Build a Capacitive Sensor</h4>
-
-There's a bit of a story behind my assignment for this week. I had been in the
-theater setting up lights for a musical, and I was
-trying to bounce-focus the lights. This is a tricky process used when lights are
-hung over, for example, stairs or pieces of scenery that prevent you from reaching
-them with a ladder or genie lift. Instead of going up to the light and pointing it
-in the right direction, the lights are flown in to ground level, pointed in our
-best guess of where they should go, and flown out again. While I was doing this,
-I thought it would be nice if I could accurately measure the tilt angle of the light
-from the ground, because then I could set the light to match whatever angle I've
-calculated from a scale drawing and hopefully get it pointed in the right direction
-with fewer tries.
-
-Because of this, I decided to make a capacitive rotary sensor to measure angles,
-like a pair of calipers but for an angle. I started by building a quick prototype
-out of cardboard and capacitive copper sheets. The idea was that at smaller angles,
-the sheets would overlap more and the capacitance would increase.
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="./rotary_prototype.jpeg" alt="a prototype capacitive sensor made of cardboard">
-</div>
-<p class="caption">The first prototype I made was small and didn't work too well.</p>
-
-That first prototype was pretty hastily-built, but it did seem to indicate that
-the basic idea of the sensor would work, so I went ahead and drafted two longer
-arms for a second prototype. The arms were cut on the laser cutter, with a rounded
-base to mount the copper sheets on and a hole for me to attach the arms via a central
-axle. I hooked up the sensor to my Arduino and set up a quick program to chart the
-capacitance on the Serial graph. As a visual indicator of the sensor value, I also added an LED to the circuit
-that would get brighter and dimmer according to the capacitance value.
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="rotary_circuit.jpeg" alt="an Arduino circuit with a similar sensor, with longer arms">
-  <img src="rotary_graph.jpeg" alt="a photo of a graph readout on a computer screen">
-</div>
-<p class="caption">Left: the second prototype, featuring longer arms, wired up
-  to an Arduino. Right: a photo of the graph readout of the changing capacitance
-  values on my computer.</p>
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="./rotary_led.jpeg" alt="same circuit as above, but with an additional LED">
-  <img src="./led_demo.gif" alt="a gif animation of the LED getting brighter and dimmer as the arms move">
-</div>
-<p class="caption">The version of the circuit with the added LED indicator.</p>
-
-</div>
-</xmp>
 </body>
-
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
 </html>

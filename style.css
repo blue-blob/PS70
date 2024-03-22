@@ -45,7 +45,8 @@ pre code {
   border: 1px solid #999;
   border-radius: 30px;
   display: block;
-  padding: 20px;
+  width: 900px;
+  padding: 10px;
 }
 
 .sub2xbullet {

@@ -113,6 +113,110 @@ video {
   <source src="conductivewalnutoil.MOV" type="video/mp4"></video><br>
  <video width="560" height="320" autoplay muted controls loop>
   <source src="thermistorpin.MOV" type="video/mp4"></video><br>
+  <pre>
+  <code>
+#include &ltCapacitiveSensor.h&gt
+<br>
+//starter code from : https://nathanmelenbrink.github.io/ps70/06_input/index.html
+
+int ThermistorPin = A0; //I put my thermistor pin into analog 0
+int Vo;
+float R1 = 100000;
+float R2, T, C, F; // Lol... so, I don't really vibe with Celsius, so I am going to convert the results from kelvin to celsius to fahrenheit
+float A = 3.354e-03; // Set vlaues part of the thermistor pin datasheet
+float B = 2.5698e-4; // Set vlaues part of the thermistor pin datasheet
+
+//INVOKING MILLIS
+//lab and this wonderful website: https://learn.adafruit.com/multi-tasking-the-arduino-part-1/using-millis-for-timing
+//shows how to use millis
+//Part of the assignment is to no longer use delay as a function, so I will be invoking millis here:
+unsigned long previousMillis = 0; // using long because this is time that we are going by
+//Previously, I had a delay of 0.5 seconds or 500 milliseconds. Millis works in intervals, so now instead of
+//making 500 milliseconds my delay, I will be using that time as my interval with the line below:
+long interval = 500; 
+
+//I will be using a sweeper server as my output device:
+#include &ltServo.h&gt
+
+class Sweeper{
+    Servo servo;
+    int servoPin;
+    int startPos;
+    int endPos;
+    int pos; //varying position
+    int increment; //how much to change per time
+    int updateInterval;
+    unsigned long previousMillis;
+
+    public:
+    Sweeper(int interval){
+        updateInterval = interval;
+        startPos = 25;
+        pos = startPos;
+        endPos = 170;
+        increment = 1;
+    }
+
+    void Attach(int pin){
+        servo.attach(pin);
+    }
+
+    void Detach(){
+        servo.detach();
+    }
+
+    void Open(){
+        if(millis() - previousMillis > updateInterval){
+        previousMillis = millis();
+        pos += increment;
+        servo.write(pos);
+        if((pos >= endPos || pos <= startPos)){
+            increment = -increment;
+        }
+      }
+    }
+};
+
+Sweeper boxServo(10); //I am going to be very honest here, I don't understand what this line does, 
+// but we used in the escape room box lab, and my code won't run without it.
+
+void setup() {
+  Serial.begin(9600);
+  boxServo.Attach(9);     
+}
+
+void loop() {
+
+  Vo = analogRead(ThermistorPin);
+  R2 = R1 * 1/(1023.0 / (float)Vo - 1.0);  //Calculate resistance of thermistor from voltage divider math.
+  T = (1.0 / (A + B*log(R2/R1) ));  // Calculate temperature using datasheet formula.
+  C = T - 273.15;                   //Convert from Kelvin to Celcius.
+  F = ((C)*1.8)+32;                 //Convert from Celcius to Fahrenheit
+
+  //MILLIS IN MY LOOP
+  //Before, we used a 500 milliseconds delay. Now, we are going to tell arduino to get readings every 500 millisecond interval.
+  unsigned long currentMillis = millis();
+ 
+  if(currentMillis - previousMillis > interval) {
+    previousMillis = currentMillis;    
+
+    Serial.print("Resistance : ");
+    Serial.print(R2);
+    Serial.print(" Ohms\  \ ");
+    Serial.print("Temperature in Celsius: "); 
+    Serial.print(C);
+    Serial.print("C\  \ ");
+    Serial.print("Temperature in Fahrenheit: "); 
+    Serial.print(F); //Added this column because I understand Fahrenheit better than Celsius
+    Serial.println("F\  \ ");
+
+    if (F > 100) {
+      boxServo.Open();
+    }
+  }
+}
+  </code>
+</pre>
 
 </body>
 </html>

@@ -1,219 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <title>Phannypacc's Documentation</title>
+    <style>
+      body {
+        color: #F2C6A1;
+      }
+    </style>
+</head>
+<head>
+<body>
+<style>
+  body {
+    background-image: linear-gradient(45deg,
+          rgba(171, 47, 103, 0.5),
+          rgba(9, 30, 70, 0.5)), 
+            url('../stars2.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: url('funcapybara.png'), auto;
+  }
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+  h1 {
+    text-align: center;
+    color:  #7A863A;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 900; /* thickness of the letters */
+    font-size: 60px; /* size of the letters */
+    cursor: url('funcapybara.png'), auto;
+    margin: 10px 10px;
+      text-shadow: 0 1px 0 #CCCC99, 0 2px 0 #CCCC99,
+                0 3px 0 #CCCC99, 0 4px 0 #CCCC99,
+                0 5px 0 #CCCC99, 0 6px 0 #CCCC99,
+                0 7px 0 #CCCC99, 0 8px 0 #CCCC99;
+
+  }
+
+  h2 {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 200; /* thickness of the letters */
+    font-size: 30px; /* size of the letters */
+    margin: 10px 10px;
+    cursor: url('funcapybara.png'), auto;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
 
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #130F1D; color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 // Intro to Digital Fabrication // F23</h2>
+ul { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+  list-style-image: square;
+  text-indent: -0.8em;
+
+} 
+
+ol { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+} 
+
+video {
+  display: block;
+  margin: auto;
+}
+
+</style>
+  <div class="starsbackground">
     </div>
+
+<h1> Week 7: Minimum Viable Product </h1>
+<h2> Lol... NOT Crushing It </h2>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: transparent; color: #EEE7E8;">
+  <div style="align-items: center; justify-content: center; " class="container-fluid">
     <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
+      <h4><a class="nav-link" href="../index.html">HOME</a></h4>
+      <h4><a class="nav-link" href="../about.html">ABOUT</a></h4>
+      <h4><a class="nav-link" href="../final.html">FINAL PROJECT</a></h4>
     </div>
   </div>
 </nav>
+<br>
 
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
+  <video width="560" height="320" autoplay muted controls loop>
+  <source src="working_example.MOV" type="video/mp4"></video>
 
-<h3>Week 1: Final Project Proposal</h3>
+<details style="padding-top: 10px; cursor: url('planetbullet.png'), auto;">
+  <summary>How to Apply Crushing Force?</summary> 
+  <br>
+    <div class="center-justified">
+      Making a product that requires the application of brute force repeatedly can make designing machine very challenging.
+      Originally, I had thought about having a robot arm that would hover over my mortar and it will be applying the up and down motion from above. However, this is difficult because the arm would need a lot of support and need significant amounts of power to exert force from up top. <br><br>
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <a id="btn" href="wk7.zip" download>Download my files from this week!
-  </a>
-</div>
-<p class="margin">   </p>
+      After talking with Nathan, I realized a different way to think about this project is applying force from below. Instead of having a robot arm from up top, I can have a stepper motor from the base of the mortar and have it be connected to a lead screw with a nut.
+      The stepper motor will rotate and the nut will rotate on the screw, but if there is something to stop the rotation of the nut, then instead of going up and down in a spiraling motion, it will be going vertically without any spirals. <br><br>
 
-<h4>Assignment: Minimum Viable Product for Final Project</h4>
+      In order for the nut to travel up, the stepper motor would have to turn in one direction. To travel down, it will have to turn in the opposite direction. Since the motion of crushing peanuts is fast and repetitive in nature, we can think about changing the direction of the motor every few seconds, and it will carry out up and down motions in a more reliable manner. <br><br>
 
-As a reminder, the pieces that were to make up my final project consisted of:
+      Therefore, the power of the pestle is actually coming from below the mortar. I was inspired by how the printers use a stepper motor and a lead screw to create an up and down motion. Below is a video recording of the 3D printer in the FAB Lab, and my goal is to emulate that. How a 3D printer does it is that they stop the rotation of the nut by having a guiding straight stick attached to it, so I will be doing the same. <br>
 
-1. An electronic circuit wiring up macro keys and a program key to an Arduino
-2. An interface between the Arduino and a computer that would allow the Arduino to
-send and recieve sequences of key presses
-3. Coding functionality to be able to assign key sequences to the various macro keys,
-using the program key
-4. An enclosure / housing to contain all the electronics, with a port to connect to
-a computer (or, optionally, Bluetooth / wireless functionality)
-5. Ideally, two rotary encoders for non-binary inputs
-6. Ideally, an LCD / OLED screen to display macro outputs for debugging etc.
-7. Ideally, a toggle switch to choose between separate profiles for the keys.
+  <br>
+      <video width="560" height="320" autoplay muted controls loop>
+  <source src="printer_motion.MOV" type="video/mp4"></video><br>
+    </div>
+</details>
 
-For my MVP, I wanted to tackle items 1 and 3 of this list: figuring out the code
-functionality that would allow me to program the macro keys. Since I didn't yet
-know how to get key presses from a connected computer, I decided to make dummy buttons
-in my Arduino circuit to treat like keyboard keys. Each button was connected to one
-channel of an RGB LED, such that I had a red button, a green button, and a blue button.
-The buttons were connected to ground on one side and Arduino digital pins on the other,
-which were set to `INPUT_PULLUP` mode so I could check when the buttons were pressed.
-I added two more buttons to be my program key and a single macro button, then
-started working on the code.
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Board Design:</summary>
+    <div class="center-justified">
+  <br>
+I will be using an A4988 motor stepper. In order to use this stepper motor, I would need a stepper driver. I will need 1 large circuit, but it requires two power supplies, the logic power supply and also the power supply for the stepper motor, which needs more power than 5V. I ended up getting this block that I can plug into the outlet, and it supplies 12 volts. The logic power supply is just the 5V from my computer and is used by the microconctroller. <br><br> 
 
-<pre><code style="background-color: #2d2b33;">
-  // pins to read input buttons
-  int r_button = 10;
-  int g_button = 11;
-  int b_button = 12;
+<div class = "centerimages">
+ <img src="driver_diagram.png" alt="Circuit schematic"> </div>
+
+     </div>
+</details>
+
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>3D Design:</summary>
+    <div class="center-justified">
+  <br>
+  Once I have decided on my motor, I need to account for it in my 3D Design, so I measured its base, and made a slot for the stepper motor in the container I am making in Autodesk Fusion. The container is a cylinder with a really big lid on top. The cylinder, for now, has a hole in order to let the wires out. The lid is a big plate with a small hole in it. The hole is there to let the screw come through. The lid is wide to allow for the guiding stick to have a place to stand next to the lead screw. 
+
+<div class = "centerimages">
+ <img src="autodesksnapshot.png" alt="3D Design of the container from Fusion"> </div>
+
+<div class = "centerimages">
+ <img src="container_print.jpeg" alt="Container with a hole for the wires and a slot for the stepper motor currently printing"> </div>
+
+  Logistically, the guiding stick will need to be situated off the plate or else it will get caught in with all the peanuts, but we will get there in 1-2 weeks.
+
+ <br><br>
+     </div>
+</details>
   
-  // pins to control LED
-  int r_out = 5;
-  int g_out = 6;
-  int b_out = 7;
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Code to switch vertical direction:</summary>
+    <div class="center-justified">
+  <br><br>
 
-  ...
+  This is the code:
 
-  // in setup function:
-  pinMode(r_button, INPUT_PULLUP);
-  pinMode(g_button, INPUT_PULLUP);
-  pinMode(b_button, INPUT_PULLUP);
+  <pre>
+  <code>
+<br>
+const int stepPin = 13;
+const int dirPin = 12;
+unsigned long previousMillis;
+int interval = 5000;
 
-  ...
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
 
-  // in loop function:
-  // if any input buttons pressed, light up with LED
-  // with the appropriate color
-  if (digitalRead(r_button) < 1) {
-    digitalWrite(r_out, HIGH);
-  } else {
-    digitalWrite(r_out, LOW);
-  }
-  if (digitalRead(g_button) < 1) {
-    digitalWrite(g_out, HIGH);
-  } else {
-    digitalWrite(g_out, LOW);
-  }
-  if (digitalRead(b_button) < 1) {
-    digitalWrite(b_out, HIGH);
-  } else {
-    digitalWrite(b_out, LOW);
-  }
-</code></pre>
+  digitalWrite(dirPin, LOW);
+}
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="mvp1.jpeg" alt="an Arduino and breadboard wired up with multiple buttons, resistors, and an LED">
-  <img src="mvp2.jpeg" alt="another angle of the same circuit">
-</div>
-<p class="caption">The completed MVP circuit. I color-coded my wires to match the appropriate
-  color channels of the LED.
-</p>
+void loop() {
 
-I knew I wanted to define a `MacroButton` class to hold the functionality of the macro
-keys (checking whether they've been pressed, storing their macro sequences, running
-their macro sequences, etc.), so I defined that class first. I had to go back to the
-documentation and check a lot of the syntax for programming in C++, especially since
-I'm used to languages with variable-length lists instead of fixed arrays. Because
-I had to use fixed arrays to hold the macros, I decided to cap the macro sequence
-lengths at 20 key presses, although that value might get raised later.
+  unsigned long currentMillis = millis();
+  //high = ccw DOWN
+  //low = cw UP
+  //digitalWrite(dirPin, LOW);
 
-In the `loop` function, I added logic to trigger a while loop when the program button
-was pressed, so that the Arduino would start listening to and recording key presses
-until the program key was pressed again. I also had to add logic to check which macro
-key was being programmed. Then, I added a loop to call the `run` method of any
-macro buttons that had been pressed. (Even though I only had one macro button at this
-point, I was programming everything as if I had several macro keys stored in an array,
-for ease of adding additional buttons later.)
+  digitalWrite(stepPin, LOW);
+  delay(1);
+  digitalWrite(stepPin, HIGH);
+  delay(1);
 
-<pre><code style="background-color: #2d2b33;">
-  // define a class for our macro buttons
-  class MacroButton{
-  
-    // declare private variables for this class
-    private:
-    int pin; // the control pin to see if this button has been pressed
-    int macro[20]; // the macro sequence
-    int macro_len = 0; // the length of the macro sequence
-  
-    // constructor
-    public:
-    MacroButton(int read_pin){
-      pin = read_pin;
-      pinMode(pin, INPUT_PULLUP);
+  if(currentMillis - previousMillis > interval) {
+      previousMillis = millis();
+      if (digitalRead(dirPin) == LOW) {
+      digitalWrite(dirPin, HIGH);
     }
-  
-    // bool isPressed(): checks if this button has been pressed.
-    // returns "true" if pressed and "false" otherwise
-    bool isPressed(){
-      ...
-    };
-  
-    // int assign(): takes a sequence of pin values and a sequence length
-    // and saves them to this macro button. Returns the macro sequence
-    // for error checking
-    int assign(int sequence[], int len) {
-      ...
-    };
-  
-    // int get_len(): returns the length of this button's macro sequence
-    int get_len() {
-      return macro_len;
-    };
-  
-    // int get_macro(): returns this button's macro sequence
-    int get_macro() {
-      return macro;
-    };
-  
-    // void run(): loops through the pin values in this button's macro
-    // sequence and one-by-one sets them to "HIGH"
-    void run() {
-      ...
-    };
-  };
+      else {
+      digitalWrite(dirPin, LOW);
+    }
+  }
+  </code> </div>
+</details>
 
-  ...
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Code for Switching Directions and Speed:</summary>
+  <div class="center-justified">
+    <pre>
+  <code>
+<br>
 
-  // in the loop function:
-  // check if any macro buttons have been triggered
-    for (int i = 0; i < num_macros; i++) {
-      if (macro_buttons[i].isPressed()) {
-        Serial.print("run macro ");
-        Serial.println(i);
-        macro_buttons[i].run();
+//For this code, I will be creating two classes: Button and 
+//Zaxis. I want my mortar and pestle to have a few 
+//different settings, but today, we will start with just
+//two. A low speed and a high speed setting. The low speed 
+//setting is indicating when only button is pressed, and the 
+//high speed setting is activated when both buttons are pressed.
+
+//As for the Zaxis class, the range of motion is greatly 
+//inspired by how 3D printers use lead screws + nut to go up 
+//and down. When it is the high speed setting, there
+//be a less of a delay in the stepper motor. When it is the 
+//low speed setting, there will be a bigger delay in the step
+//sequence of the stepper motor.
+
+//Below is the class Button:
+int interval = 1000;
+class Button{
+
+  //Establish my member variables:
+  int buttonPin;
+  int buttonState;
+
+  //Constructor
+  public:
+  Button(int pin){
+    buttonPin = pin; //This will let my microcontroller know
+                     //pin the button is connected to.
+    pinMode(buttonPin, INPUT_PULLUP);
+    buttonState = HIGH; //I am starting off saying that 
+                        //e button is off, or not pressed.
+  }
+  int Update(){
+    buttonState = digitalRead(buttonPin); //I want to know 
+                                          //the on/off status of my buttons.
+    return buttonState;
+  }
+};
+
+
+//Below is the class Zaxis:
+class Zaxis{
+  //Establish my member variables:
+  int mstepPin; //Apparently, there are many ways to set my member variables.
+  //https://stackoverflow.com/questions/10198046/c-member-variables
+  //This site talks about the pro's and con's of three different methods, and I
+  //chose the method below:
+  //void A::setNumber(int number){mNumber = number;}
+  //so that is why you see mstepPin and mdirPin and see it be set by stepPin and dirPin int
+  //later in the constructor.
+  int mdirPin;
+  bool highspeed;
+  bool lowspeed;
+  unsigned long updateInterval; //I didn't know how to make it so that 
+                                //if the pestle reached the mortar then it would go back up,
+                                //so for now, I am just putting in an interval, and telling 
+                                //it to go up 1 second and down 1 second and repeat.
+  unsigned long previousMillis;
+  //to avoid delays, I am invoking millis.
+
+
+  //Constructor
+  public:
+  Zaxis (int stepPin, int dirPin, long interval){
+    updateInterval = 1000;
+    previousMillis = 0;
+    mstepPin = stepPin;
+    mdirPin = dirPin;
+    pinMode(mstepPin, OUTPUT);
+    pinMode(mdirPin, OUTPUT);
+    highspeed = false; //I am putting my initial 
+                       //bool values at false. At the very beginning
+    lowspeed = false; // neither speed settings are being 
+                      //indicated until a button is pressed.
+  }
+
+  void Quicker(bool value) {
+    highspeed = value;
+  }
+
+  void Slower(bool value){
+    lowspeed = value;
+  }
+
+  void Open(int speed) {
+
+    unsigned long currentMillis = millis();
+    if (speed > 0) {
+    digitalWrite(mstepPin, LOW);
+    delay(speed);
+    digitalWrite(mstepPin, HIGH);
+    delay(speed);
+    }
+    else{
+      digitalWrite(mstepPin, LOW);
+    }
+    //if the reached a second, the stepper motor will turn the other way
+    if(currentMillis - previousMillis > interval) {
+      previousMillis = millis();
+      if (digitalRead(mdirPin) == LOW) {
+      digitalWrite(mdirPin, HIGH);
+        }
+      else {
+      digitalWrite(mdirPin, LOW);
       }
     }
-</code></pre>
+  }
 
-At this point, with most of the basic logic implemented, I started to run into problems.
+};
 
-First, I figured out that the high clock speeds on the Arduino meant I had
-to separate code out into separate functions and add `delay` commands to make sure
-the Arduino would actually wait for key presses before continuing, and that key
-presses would only register once instead of multiple times.
+//Now that I have defined my classes, I can then use them:
 
-I also realized that the macro sequences weren't being properly assigned to the
-macro keys. This was a tricky issue to figure out, but Bobby helped me eventually
-discover that when I was passing the macro key to be programmed into the function
-that would program it, the program was essentially passing a *copy* of the button
-instead of the button itself, and so the sequence wasn't being saved. We fixed this
-by adding an ampersand in the input definition of the programming function so that
-it would edit the actual button that was passed in.
+Button button1(5); //one button is connected to pin 5
+Button button2(7); // one button is connected to pin 6
+Zaxis pestle(13,12,1000); //stepPin is connected to pin 13,
+                          //dirPin is connected to pin 12
+                          //interval is 1000 ms.
+int speed;
+void setup() {
+  //I am using a serial monitor to see which buttons I have pressed
+}
 
-With that, the keyboard started working as expected! The complete final code, with
-explanatory comments, can be downloaded at the top of this page. Here's a video of
-the macro functionality, using the RGB LED:
+void loop () {
+  // Serial.print("Button 1: ");
+  // Serial.print(button1.Update());
+  // Serial.print(" Button 2: ");
+  // Serial.println(button2.Update());
+  
+  //below is the logic: if both buttons are pressed, high speed.
+  //If only button 1 is pressed, low speed.
+  //Anything else: either only button 2 is pressed, or none is pressed,
+  //the speed settings are false.
+  //In the next stage of this project, just button 2 is another speed setting.
+  //I also need to find a way to make my stepper motor stop moving
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <video controls>
-    <source src="./mvp_demo.mov" type="video/mp4">
-  </video>
-  </div>
-<p class="caption">The working MVP!</p>
-
-</div>
-</xmp>
+  if(button1.Update() == LOW ){ //== LOW && button2.Update() == LOW){
+    // pestle.Slower(false);
+    // pestle.Quicker(true);
+    speed = 1;
+    }
+  else if(button2.Update() == LOW ){ //== LOW && button2.Update() == HIGH){
+    // pestle.Slower(true);
+    // pestle.Quicker(false);
+    speed = 10;
+    }
+  else{
+    // pestle.Slower(false);
+    // pestle.Quicker(false);
+    speed = 0;
+    }
+  pestle.Open(speed);
+  }
+  </code> </div>
+</details>
+  
 </body>
-
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
 </html>

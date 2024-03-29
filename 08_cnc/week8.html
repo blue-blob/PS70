@@ -1,128 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <title>Phannypacc's Documentation</title>
+    <style>
+      body {
+        color: #F2C6A1;
+      }
+    </style>
+</head>
+<head>
+<body>
+<style>
+  body {
+    background-image: linear-gradient(45deg,
+          rgba(171, 47, 103, 0.5),
+          rgba(9, 30, 70, 0.5)), 
+            url('../stars2.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: url('funcapybara.png'), auto;
+  }
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+  h1 {
+    text-align: center;
+    color:  #7A863A;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 900; /* thickness of the letters */
+    font-size: 60px; /* size of the letters */
+    cursor: url('funcapybara.png'), auto;
+    margin: 10px 10px;
+      text-shadow: 0 1px 0 #CCCC99, 0 2px 0 #CCCC99,
+                0 3px 0 #CCCC99, 0 4px 0 #CCCC99,
+                0 5px 0 #CCCC99, 0 6px 0 #CCCC99,
+                0 7px 0 #CCCC99, 0 8px 0 #CCCC99;
+
+  }
+
+  h2 {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 200; /* thickness of the letters */
+    font-size: 30px; /* size of the letters */
+    margin: 10px 10px;
+    cursor: url('funcapybara.png'), auto;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
 
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #130F1D; color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 // Intro to Digital Fabrication // F23</h2>
+ul { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+  list-style-image: square;
+  text-indent: -0.8em;
+
+} 
+
+ol { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+} 
+
+video {
+  display: block;
+  margin: auto;
+}
+
+</style>
+  <div class="starsbackground">
     </div>
+
+<h1> Week 8: CNC Machine </h1>
+<h2> CAPYBARA in More Forms </h2>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: transparent; color: #EEE7E8;">
+  <div style="align-items: center; justify-content: center; " class="container-fluid">
     <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
+      <h4><a class="nav-link" href="../index.html">HOME</a></h4>
+      <h4><a class="nav-link" href="../about.html">ABOUT</a></h4>
+      <h4><a class="nav-link" href="../final.html">FINAL PROJECT</a></h4>
     </div>
   </div>
 </nav>
+<br>
 
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
+<details style="padding-top: 10px; cursor: url('planetbullet.png'), auto;">
+  <summary>Capybara DXF</summary> 
+  <br>
+    <div class="center-justified">
+    I downloaded Inkscape and then searched on Google for some capybara png's. Then, I downloaded a png I wanted and imported it into inkscape. In Inkscape, I went to Path > Trace Bitmap in order to get a black and white vector version of the png I wanted. Then, I imported
+    it as an DXF onto a flashdrive, and OFF THE SHOPBOT WE GOOOOOO!
+    <br><br>
 
-<h3>Week 8: CNC Milling</h3>
+    <div class = "centerimages">
+ <img src="cowcapybara.png" alt="The capybara with a hat that I chose"> </div>
+
+</details>
 
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <a id="btn" href="wk8.zip" download>Download my files from this week!
-  </a>
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Cutting with the ShopBot</summary>
+    <div class="center-justified">
+  <br>
+  I then used the CNC machine with the guidance of Kassia. I only wanted a small capybara, so we are going for approximately 3 inches. The depth of the wooden board was 0.75 inches. Because the capybara was small and the CNC cannot cut precise details, I had no choice but to delete cute little marks on my capybara that represent the fur. Additionally, some of the lines in the capybara vector was not connected, so in order to select what I actually want as my pocket and border, I had to connect some lines to get the area I want. 
+
+  <br><br>
+
+  <div class = "centerimages">
+ <img src="shopbotsoftware.jpeg" alt="Shopbot software, I am trying to track the cutting path here."> </div>
+ <br><br>
+
+  Some other challenges were that I could not figure out a way to exclude places from the area that I designate as my pocket. My capybara has these blushes indicated by big circles. However, these circles are in the bigger pocket in the middle of the capybara. I cannot find a way to have the pocket be everything except for those blushes. Kassia tried to help me but we couldn't figure out a way. RIP.
+
+  <br><br>
+
+  We then set the cnc machine into action!! The cutting did not go unhitched. I had to stop the machine halfway in order to vacuum the shavings. The shavings were getting in the way of the cutting path, so the cnc machine ended up botching the border of my capybara.
+
+  <br><br>
+
+<div class = "centerimages">
+ <img src="cncinaction.jpeg" alt="Shopbot is currently cutting the capybara"> </div>
+ <br><br>
+     </div>
+</details>
+  
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Vacuum Form:</summary>
+    <div class="center-justified">
+  <br>
+
+After the ShopBot finished cutting out my capybara, I sanded my capybara a little bit, and then went to vacuum form a plastic sheet. Because my capybara was pretty small, I used the dental vacuum form machine. It was small, but I think I will be able to catch when the plastic is melted enough to drape it over the capybara when it's time. The bigger machine would require more of a hassle to see if the plastic is melting enough. 
+
+
+<br><br>
+
+What is considered melting "enough"? I was told, when the plastic starts to drape and sag a little bit, but that is still not specific enough, so I did a little bit of trial and error. I used the vacuum form machine three times. Both the first and second time, I waited too long. The plastic was too hot and was really grabbing onto the wooden piece making it really hard to pull out the capybara. When I did manage to pull out the capybara, I ended up with a botched plastic mold. I would say the right time would be when it starts to drape, and give it another 45 seconds to a minute. If it starts to rapidly drape lower and lower very quickly, that means the appropriate time has passed. Attached is the sequential order of my attempts at the vacuum form machine.
+
+<br><br>
+
+<div class = "centerimages">
+ <img src="allthreeform.jpeg" alt="The three attempts at vacuum forming"> </div>
+ <br><br>
 </div>
-<p class="margin"></p>
+</details>
 
-<h4>Assignment: Make Something With CNC</h4>
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Liquid Plastic into the Mold:</summary>
+  <div class="center-justified">
+  <br>
+
+  I then grabbed liquid plastic part A and part B and followed the instructions there to make a 1:1 ratio mix. I wanted to give my capybara a little bit of marbling, so I added in purple, white, and green paint. I mixed it up too much, so it ended up not marbling. Interestingly though, I think the paint might have reacted to the liquid plastic mixture, because as soon as I put in the paint to mix, the mixture started to bubble up and expand. It was an exothermic reaction based on how the heat was just radiating out of the bucket.
 
 
-This week, I wanted to spend more time on the CNC machining aspect of the
-assignment than on designing, so I went on Thingiverse and looked for things
-that could be fabricated on the ShopBot. I found
-<a href="https://www.thingiverse.com/thing:1685933">this</a> model of a
-laptop / tablet stand interesting, especially since it's adjustable to different
-heights. Before I could just open up the file in Aspire, I had to make sure the
-scale was correct, so I brought it into Adobe Illustrator. I found that none of
-the vector paths were closed (instead, they were just discrete points), so I
-connected those and then made sure the scale of the stand would work with the
-hardware I was planning to use (M5 screws and nuts, mainly).
+  <br><br>
 
-<p class="margin">   </p>
-<div class="class\">
-  <img src="tablet_stand_ai.png" alt="screenshot of vector design in Illustrator">
-</div>
-<p class="caption"></p>
+  <div class = "centerimages">
+ <img src="waitingformold.jpeg" alt="Pouring the mixture into the molds"> </div>
+ <br>
 
-At first, I was running into odd behavior when defining toolpaths for the shape
-in Aspire, but eventually, with the help of the TAs, I managed to figure out
-that I had forgotten to close one of the vector paths. Once I fixed that, I was
-able to define all the tool paths in Aspire and cut out the parts on the ShopBot.
-The cutting bit was far scarier than I was anticipating!
+  This happened really fast, and I was scared that the liquid plastic will cure before I even get it into my mold. I dumped it into my various capybara mold and let the molds to cure. One of them, I left to cure for 4 minutes, and the other one, I left to cure for 10 minutes as the recipe suggested. The mold that was left to cure for 10 minutes was definitely harder to remove, but it left a shape that was alot more voluptuous.
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <video controls>
-    <source src="./milling.mov" type="video/mov">
-  </video>
+<br><br>
+
+  <div class = "centerimages">
+ <img src="voluminous.jpeg" alt="One outcome was better than the other"> </div>
+ <br>
+
+   <div class = "centerimages">
+ <img src="sidetosidecomparison.jpeg" alt="One outcome was better than the other"> </div>
+ <br>
+
   </div>
-  <div class="flexrow">
-    <img src="milled-parts.jpeg" alt="a photo of several flat pieces of plywood with rough edges">
-    </div>
-<p class="caption">The ShopBot was an efficient choice for cutting the pieces out of plywood.</p>
-
-The next step was to process the pieces and fit it all together. The cutting bit
-splintered the outer layers of the plywood a little, so I used some sandpaper to
-smooth them out. The wooden stubs on the ends of the crosspieces were too large to
-fit into the holes cut for them, so I cut them down a little on the bandsaw. I
-cut down a small dowel to use as a crosspiece for the hinge at the bottom, then
-fit all the pieces together.
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="stand2.jpeg" alt="">
-  <img src="stand6.jpeg" alt="">
-</div>
-<div class="flexrow">
-  <img src="stand3.jpeg" alt="">
-  <img src="stand9.jpeg" alt="">
-</div>
-<p class="caption">Photos of the table stand showing its various use cases.</p>
-
-<p class="margin">   </p>
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="stand-detail1.jpeg" alt="">
-  <img src="stand-detail5.jpeg" alt="">
-</div>
-<div class="flexrow">
-  <img src="stand-detail4.jpeg" alt="">
-</div>
-<p class="caption">Here you can see the details of how the stand fits together, as well as the warped side piece.</p>
-
-The final stand is adjustable to a range of angles and can be used both vertically
-and horizontally. One of the pieces of plywoood is a little warped, so the edge
-isn't quite straight, but it's not enough of a defect to make the stand unusable.
-I sanded down all the edges more and used some black wood stain to make the stand
-look a little nicer; I didn't want it to be pure black, so instead of letting the
-stain soak in for the recommended time I wiped the excess off right after I was done
-painting it on, which left me with a cool, charcoal kind of look.
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="new_stand.png" alt="">
-  <img src="new_stand2.png" alt="">
-</div>
-<div class="flexrow">
-  <img src="new_stand_detail.png" alt="">
-</div>
-<p class="caption">Some images of the completed tablet stand.</p>
-
-
-</div>
-</xmp>
+</details>
+  
 </body>
-
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
 </html>

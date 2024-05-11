@@ -113,6 +113,32 @@ video {
   <source src="conductivewalnutoil.MOV" type="video/mp4"></video><br>
  <video width="560" height="320" autoplay muted controls loop>
   <source src="thermistorpin.MOV" type="video/mp4"></video><br>
+
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>If hot, then move away:</summary>
+    <div class="center-justified">
+
+  <br>
+
+  In addition to doing so more capacitive sensor testing with walnuts, I also wanted to branch out a use a sensor that is unrelated to my project. I feel like all the sensors we have talked about in class go about their sensoring magical powers in different ways. So, I just selected thermistor pin and see if I can make it work.
+  <br><br>
+
+  I used some starter code from the thermistor pin section in class. The goal for this code is that when it hits a certain temperature (100 degrees Fahrenheit), which the sensor will be detecting, the Arduino will then tell the servo motor to move. Finding a way to reach the temperature quickly was a bit difficult. I didn't have someone who could go to lab with me and be my buddy, so I brought my stuff home, where there a lot fewer resources to work with. I did have a lighter though, and in hindsight, this is probably such a hazardous idea of using open flame in a middle of a chaos of wires and a breadboard, but alas, it got the job done to reach the temperature of 100 degrees F. I learned from Bobby afterwards that in lab, we have a heat gun, which made me realize there was definitely a safer way to test my thermistor pin. What I did involved burning up a q-tip and putting that flame right on top of the thermistor pin.
+  <br><br>
+
+<div class = "centerimages">
+ <img src="diagram.jpg" alt="Circuit diagram"> </div><br>
+
+  I will also try to no longer use delay and instead incorporate what we learned in lab regarding millis. To do that, I need to initial an unsigned long mills. Then, I also have to create an interval of 500 milliseconds. I also wanted to see what my sensor was detecting, so I did some coding to make my serial monitor be more clear as to what temperature the thermistor pin was detecting. 
+  <br><br>
+
+  For the code, I had to make one class for my sweeper. I did this in class, but now that I have to create my own class, I actually understand it much better. I gave it a start position and an end position, but that it will only do this once the temperature is 100 degrees F. So, there is an if condition. I explain more about the code in the next section in the comments.
+  <br><br>
+  </details>
+
+<details style= "cursor: url('planetbullet.png'), auto;">
+  <summary>Code for Thermistor Pin:</summary>
+    <div class="center-justified">
   <pre>
   <code>
 #include &ltCapacitiveSensor.h&gt
@@ -122,7 +148,8 @@ video {
 int ThermistorPin = A0; //I put my thermistor pin into analog 0
 int Vo;
 float R1 = 100000;
-float R2, T, C, F; // Lol... so, I don't really vibe with Celsius, so I am going to convert the results from kelvin to celsius to fahrenheit
+float R2, T, C, F; // Lol... so, I don't really vibe with Celsius, 
+//so I am going to convert the results from kelvin to celsius to fahrenheit
 float A = 3.354e-03; // Set vlaues part of the thermistor pin datasheet
 float B = 2.5698e-4; // Set vlaues part of the thermistor pin datasheet
 
@@ -188,7 +215,8 @@ void setup() {
 void loop() {
 
   Vo = analogRead(ThermistorPin);
-  R2 = R1 * 1/(1023.0 / (float)Vo - 1.0);  //Calculate resistance of thermistor from voltage divider math.
+  R2 = R1 * 1/(1023.0 / (float)Vo - 1.0);  
+  //Calculate resistance of thermistor from voltage divider math.
   T = (1.0 / (A + B*log(R2/R1) ));  // Calculate temperature using datasheet formula.
   C = T - 273.15;                   //Convert from Kelvin to Celcius.
   F = ((C)*1.8)+32;                 //Convert from Celcius to Fahrenheit
@@ -217,6 +245,7 @@ void loop() {
 }
   </code>
 </pre>
+</details>
 
 </body>
 </html>

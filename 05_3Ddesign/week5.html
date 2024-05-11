@@ -1,127 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <title>Phannypacc's Documentation</title>
+    <style>
+      body {
+        color: #F2C6A1;
+      }
+    </style>
+</head>
+<head>
+<body>
+<style>
+  body {
+    background-image: linear-gradient(45deg,
+          rgba(171, 47, 103, 0.5),
+          rgba(9, 30, 70, 0.5)), 
+            url('../stars2.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: url('funcapybara.png'), auto;
+  }
 
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
+  h1 {
+    text-align: center;
+    color:  #7A863A;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 900; /* thickness of the letters */
+    font-size: 60px; /* size of the letters */
+    cursor: url('funcapybara.png'), auto;
+    margin: 10px 10px;
+      text-shadow: 0 1px 0 #CCCC99, 0 2px 0 #CCCC99,
+                0 3px 0 #CCCC99, 0 4px 0 #CCCC99,
+                0 5px 0 #CCCC99, 0 6px 0 #CCCC99,
+                0 7px 0 #CCCC99, 0 8px 0 #CCCC99;
+
+  }
+
+  h2 {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*  */
+    font-weight: 200; /* thickness of the letters */
+    font-size: 30px; /* size of the letters */
+    margin: 10px 10px;
+    cursor: url('funcapybara.png'), auto;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
 
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #130F1D; color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 // Intro to Digital Fabrication // F23</h2>
+ul { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+  list-style-image: square;
+  text-indent: -0.8em;
+
+} 
+
+ol { 
+  font-size: 20px;
+  list-style-position: inside;
+  text-align: center;
+} 
+
+video {
+  display: block;
+  margin: auto;
+}
+
+</style>
+  <div class="starsbackground">
     </div>
+
+<h1> Week 5: 3D Print </h1>
+<h2> Threading for Capybara Box</h2>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: transparent; color: #EEE7E8;">
+  <div style="align-items: center; justify-content: center; " class="container-fluid">
     <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
+      <h4><a class="nav-link" href="../index.html">HOME</a></h4>
+      <h4><a class="nav-link" href="../about.html">ABOUT</a></h4>
+      <h4><a class="nav-link" href="../final.html">FINAL PROJECT</a></h4>
+      
     </div>
   </div>
 </nav>
+<br>
 
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
+<details style="padding-top: 10px; cursor: url('planetbullet.png'), auto;">
+  <summary>Goal of this Week's Project</summary> 
+  <br>
+    <div class="center-justified">
+      <br><br>
+      Part of my final project will have a bowl of sorts. I have been wondering if I should give this bowl a lid. I know machines can't produce a lot of force with the voltage that we have access to, so if I make a pop on and off snug cap, I am afraid the machine won't be able to generate enough force to pop out the lid. So, for this week, I want to try to make my own container with some threading. I think the machine can potentially have enough force to unscrew a lid. However, the mechanism of unscrewing the lid is a bit harder in that instead of popping up and pushing down like a pop up lid, this lid would need circular motion to unscrew. Oh well, I think both types of container is going to produce some difficulty, but we will get there eventually.
+      <br><br>
 
-<h3>Week 5: 3D Design & Printing</h3>
+      Now, to the threading part. There is a threading feature on autodesk fusion, but I want to learn how to design my own manually, so I sought out Fusion tutorials threading tutorials. There were quite a few. I chose: "How to design entirely custom threads (with multiple starts) in Fusion 360" by "getprototyping"
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <a id="btn" href="wk5.zip" download>Download my files from this week!
-  </a>
-</div>
-<p class="margin">   </p>
+      <br><br>
+          <iframe width="560" height="315" src="https://youtu.be/Ac3Vbb-L3Ag?feature=shared" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h4>Assignment: Design and Print Something</h4>
+      <br><br>
 
-As a first test print, I wanted to model an amber relic from the video game
-*The Legend of Zelda: Skyward Sword*, because it's a smooth round shape that
-would be hard to make with subtractive processes. I modeled it with square
-edges in Fusion, then used the Fillet tool to round it off. I scaled the model
-to take about 15 minutes to print, then sliced it in Prusa and printed it.
+      <div class = "centerimages">
+      <img src="Youtubevideo.png" alt="Youtube Tutorial"> </div>
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="./relic_preround.png" alt="a 3D model of a Japanese magatama shape with square edges">
-  <img src="./relic.png" alt="the same model, now with all the edges rounded off">
-</div>
-<p class="caption">Left: the extrusion step (note the square edges). Right: the rounded relic shape.</p>
+      OFF WE GO!!!
+  <br><br>
+    </div>
+</details>
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="relic1.png" alt="a 3D printed plastic version of the relic shape from above">
-  <img src="relic2.png" alt="another view of the same model">
-</div>
-<p class="caption">The printed piece. I thought it was cool that the translucent
-  filament lets you see the structure of the infill supports.</p>
+<details style="padding-top: 10px; cursor: url('planetbullet.png'), auto;">
+  <summary>Following the Tutorial</summary> 
+  <br>
+    <div class="center-justified">
+      <br><br>
 
-For an actual project, I wanted to make a snap-close case that could hold my
-ID, because right now I have a flexible plastic one that's splitting at the seams from repeated
-opening and closing. To start, I looked up some tutorials on snap joints, and found
-a few videos about modeling a snap-close box. At first, I wanted to make a case
-with a hinge on one side and a snap closure on the other, but then I switched to
-just a basic snap case for a first prototype since it seemed like the hinge would
-be tricky. You can watch the tutorial I eventually settled on <a href="https://youtu.be/VVmOtM60VWw" target="_blank">here</a>.
+      Steps of the Tutorial:
+      <br><br>
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="./snapcase.png" alt="a 3D model of two halves of an ID card case">
-  <img src="./snapjoint2.png" alt="a close up of part of the same model, showing a triangular ridge and its corresponding hole">
-</div>
-<p class="caption">Left: version one of the snap-fit case. Right: a close-up of the snap joint.</p>
+      1. The biggest theme of this tutorial is using the revolve and pattern tools. We create a sketch profile only on one side, but by using the revolve tool, we can make the profile go 360 or by how many degrees we want. This especially works if we are making a circular container. If the container has weird edges, more thinking will have to be done when using the revolve tool. For example, from multivariable calculus, we have a y=x line going from (0,0,0) and then we are revolving it, we get a cone. That is just to put it into perspective of how edges and the revolve tool works.
+      <br><br>
 
-My first prototype didn't quite fit together properly, and I realized that that was
-probably because the distance between the outer rim and the inner shelf on the cover
-didn't have any tolerance in it to fit properly with the bottom, so when it was
-printed the slight expansion of the parts made the shelf too large. I redesigned
-the top cover to have an outer ridge to house the snap holes, and I also made the case
-slightly larger so the ridge would fit around an id card instead of resting on top.
+      <div class = "centerimages">
+      <img src="sketchprofile.png" alt="Sketch profile"> </div><br>
 
-<p class="margin">   </p>
-<p class="margin">   </p>
-<h4>Assignment: Scan Something</h4>
+      2. The sketch profile is separated into four bodies: container main, container thread, lid main, and lid thread. This is done by carefully selecting the pieces we want after creating a whole sketch profile for the whole bottle.
+      <br><br>
 
-I used the lab scanner to make a 3D scan of a tape measure and along the way made some
-discoveries about what scans well and what doesn't. At first I wanted to scan a screw,
-but all the screws I found were either 1) shiny, which doesn't scan well; 2) dark-colored,
-which also doesn't scan well; and/or 3) too small for the sensor to see. My second
-scan attempt was a flashdrive I have, which also was a little too small and too
-shiny to scan well.
+      <div class = "centerimages">
+      <img src="afterrevolve.png" alt="Solid created after revolving"> </div><br>
 
-<p class="margin">   </p>
-The third attempt was when I scanned the tape measure, which kind
-of worked. The black parts of the tape measure didn't scan well, nor did the metal
-bit at the end of the tape, and I had to rest it on its side for stability reasons
-instead of standing it up, so the scan has some holes in it. That being said,
-the scane did produce an object that, with some adjustment work, could probably
-be a viable 3D print (albeit a low-resolution one), so I counted it as mostly a success.
+      3. After that, I need to make the actual threading profile, so these are like triangles with rounded tips spaced not very far from each other.
+      <br><br>
 
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="tapemeasure.png" alt="a 3D scan of a yellow and black tape measure">
-</div>
-<p class="caption">The final scan was not great, but it was legible as a tape measure!</p>
-
-Later, I also printed a few more models that I found online: an articulated shark
-and an airtag case designed to look like an Oreo cookie. The shark is designed to
-have a moveable jaw, but the hinge broke as I was trying to get the supports out,
-so I ended up just gluing it shut. The designer of the airtag case either didn't
-properly account for part expansion or I printed it wrong, because one of the pieces
-was a few millimeters too big in diameter. I managed to get it to fit by filing
-the part down and then using a hammer to get it to snap in correctly.
-
-<p class="margin">   </p>
-<div class="flexrow">
-  <img src="3d_prints.png" alt="a collection of 3D-printed items">
-</div>
-<p class="caption">An assembly of some of my 3D prints from this semester.</p>
+      <div class = "centerimages">
+      <img src="threadprofile.png" alt="Thread profile"> </div><br>
 
 
-</div>
-</xmp>
-</body>
+      4. Then, I create a coil to make a path for the thread.
+      <br><br>
 
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+      <div class = "centerimages">
+      <img src="coil.png" alt="coil path"> </div><br>
 
-</html>
+      5. With the path and the profile for the threading complete, I then use the sweep tool. The sweep tool allows for me to select the profile I want to sweep around a sepcific path, in this case, I select it to be the outer edge of my coil. I also use an offset plane right at the bottom of the lid.
+      <br><br>
+
+      <div class = "centerimages">
+      <img src="sweeptool.png" alt="sweeping tool"> </div><br>
+
+
+      6. Then, I intersect the body that was sweeping with the body of the container in order to get the actual thread.
+      <br><br>
+
+
+      7. This whole time, I have only been making 1 start. I want multiple starts, so now I use the circular pattern. I let the center of the lid be my center and the thread body be the body I want to make a circular pattern out of.
+      <br><br>
+
+
+      8. I repeat this to make the threading for container lid.
+      <br><br>
+
+  <br><br>
+    </div>
+</details>
+
+<details style="padding-top: 10px; cursor: url('planetbullet.png'), auto;">
+  <summary>Printing Fail</summary> 
+  <br>
+    <div class="center-justified">
+      <br><br>
+      While most of my print was successful, because the threading was too small for the 3D printer's precision threshold, I didn't get the threading pattern that I wanted. However, I did learn to make the threading a bit thicker for my actual bottle. This is just a prototype.
+
+      <div class = "centerimages">
+      <img src="prototype.jpeg" alt="Threading on container successful"> </div><br>
+
+      <div class = "centerimages">
+      <img src="threadingtoothin.jpeg" alt="Threading on container lid unsuccessful"> </div><br>
+
+
+  <br><br>
+    </div>
+</details>
